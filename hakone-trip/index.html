@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html lang="th">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Hakone Family Trip</title>
+<meta content="#141a2a" name="theme-color"/>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--ink:#101727;--muted:#707887;--line:#e6e9f0;--accent:#ef6c57;--soft:#fff1ec;--blue:#2d65d8;--green:#176044;--warn:#8a5a00;--red:#a62626}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans Thai",Tahoma,sans-serif}.wrap{max-width:980px;margin:auto;padding:0 16px 70px}.hero{margin:0 -16px 16px;padding:calc(22px + env(safe-area-inset-top)) 22px 28px;background:linear-gradient(135deg,#151a29,#2a3144);color:#fff;border-radius:0 0 30px 30px}.eyebrow{font-size:12px;letter-spacing:.1em;font-weight:800;opacity:.65}.hero h1{margin:7px 0 5px;font-size:30px;text-wrap:balance}.hero p{margin:0;opacity:.78}.badge{display:inline-block;margin-top:14px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.09);padding:8px 11px;border-radius:999px;font-size:12px}
+.tabinput{position:absolute;opacity:0;pointer-events:none}.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(245,247,251,.95);padding:8px 0 12px;backdrop-filter:blur(10px)}.tabs label{display:block;text-align:center;padding:12px 8px;border-radius:14px;background:#e9edf5;color:#687083;font-weight:800}.panel{display:none}#tabday1:checked~.tabs label[for=tabday1],#tabday2:checked~.tabs label[for=tabday2],#tabtoilet:checked~.tabs label[for=tabtoilet]{background:#111827;color:#fff}#tabday1:checked~#day1,#tabday2:checked~#day2,#tabtoilet:checked~#toilets{display:block}
+.section-title{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:16px 2px 10px}.section-title h2{margin:0;font-size:20px}.section-title small{color:var(--muted)}.notice{background:#fff7df;border:1px solid #f3dfa6;color:#765a13;border-radius:16px;padding:12px 14px;font-size:13px;margin-bottom:12px;line-height:1.55}.timeline{position:relative}.timeline:before{content:"";position:absolute;left:52px;top:14px;bottom:14px;width:2px;background:#dfe4ec}.stop{display:grid;grid-template-columns:42px 1fr;gap:18px;position:relative;margin-bottom:12px}.time{font-size:12px;font-weight:900;padding-top:18px;text-align:right}.time:after{content:"";position:absolute;left:45px;top:22px;width:14px;height:14px;border:3px solid var(--accent);background:#fff;border-radius:50%;z-index:2}.card,.backup-card{background:var(--card);border:1px solid var(--line);border-radius:19px;overflow:hidden;box-shadow:0 4px 14px rgba(17,24,39,.04)}details>summary{list-style:none;cursor:pointer;padding:14px}details>summary::-webkit-details-marker{display:none}.head{display:flex;gap:11px;align-items:center}.icon{width:44px;height:44px;border-radius:14px;background:var(--soft);display:grid;place-items:center;font-size:22px;flex:none}.head h3{margin:0;font-size:16px}.sub{font-size:12px;color:var(--muted);margin-top:3px}.chev{margin-left:auto;color:#9ca3af;font-size:20px}.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.chip{font-size:11px;font-weight:700;padding:6px 8px;background:#f2f4f8;border-radius:999px;color:#586071}.chip.good{background:#e8f6ef;color:#176044}.chip.warn{background:#fff4d8;color:#7a5600}.chip.bad{background:#fdeaea;color:#8f2424}.details{border-top:1px solid var(--line);padding:0 14px 15px}.lead{color:#4c5566;font-size:13px;line-height:1.65}.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.info{background:#f7f8fa;border-radius:13px;padding:11px}.info b{display:block;font-size:11px;margin-bottom:4px}.info span{font-size:12px;color:#596273}.details h4{margin:16px 0 8px}.details ul{margin:0;padding-left:20px;color:#3f4755}.details li{margin:6px 0;font-size:13px}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.btn{display:inline-block;text-decoration:none;border-radius:12px;padding:10px 12px;background:#111827;color:#fff;font-weight:800;font-size:13px}.btn.light{background:#eef1f5;color:#343b49}.btn.blue{background:#2d65d8}.btn.red{background:#9f2b2b}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0 8px}.scene{aspect-ratio:4/3;border-radius:14px;overflow:hidden;position:relative;padding:12px;color:#fff;display:flex;flex-direction:column;justify-content:space-between;min-height:130px}.scene .emoji{font-size:34px;filter:drop-shadow(0 2px 6px rgba(0,0,0,.2))}.scene b{font-size:12px;line-height:1.25;text-shadow:0 1px 5px rgba(0,0,0,.4)}.scene small{font-size:10px;opacity:.9}.s-air{background:linear-gradient(155deg,#769fc9,#38536f)}.s-shop{background:linear-gradient(155deg,#43a071,#1e6651)}.s-road{background:linear-gradient(155deg,#e18b57,#9e4c36)}.s-food{background:linear-gradient(155deg,#d77b48,#8a3924)}.s-sea{background:linear-gradient(155deg,#5e9eb2,#31576e)}.s-soba{background:linear-gradient(155deg,#a77647,#66452c)}.s-mountain{background:linear-gradient(155deg,#7f9f8e,#3d5c4d)}.s-fuji{background:linear-gradient(155deg,#82aacf,#415f84)}.s-black{background:linear-gradient(155deg,#555,#161616)}.s-water{background:linear-gradient(155deg,#57a9cc,#246986)}.s-wine{background:linear-gradient(155deg,#b5536c,#66273c)}.s-coffee{background:linear-gradient(155deg,#9b6d51,#4f372b)}.s-irori{background:linear-gradient(155deg,#a85b36,#53281f)}.s-room{background:linear-gradient(155deg,#8b7d6d,#4e463e)}.s-kitchen{background:linear-gradient(155deg,#85919c,#495763)}.s-onsen{background:linear-gradient(155deg,#78a99d,#345f59)}.s-sushi{background:linear-gradient(155deg,#c36d5f,#7c3c36)}.s-western{background:linear-gradient(155deg,#b78258,#704d34)}.s-beer{background:linear-gradient(155deg,#d4a23a,#76550f)}.s-pizza{background:linear-gradient(155deg,#c65d3d,#772f25)}.s-warning{background:linear-gradient(155deg,#be5a5a,#702c2c)}.gallery-note{font-size:11px;color:var(--muted);margin:4px 0 12px}.gallery-note strong{color:#4d5667}
+.restaurant-box,.locator{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;margin-top:14px}.restaurant-box h3,.locator h3{margin:0 0 8px}.backup-grid{display:grid;gap:10px;margin-top:12px}.backup-card summary{padding:12px}.backup-card .details{padding-bottom:14px}.backup-card .head h3{font-size:15px}.backup-card .icon{width:38px;height:38px;font-size:19px;border-radius:12px}.menu-list{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}.menu-item{background:#f7f8fa;border-radius:13px;padding:10px}.menu-item b{font-size:12px;display:block}.menu-item span{font-size:11px;color:#666f7e;line-height:1.45;display:block;margin-top:4px}.pick{border:1px solid #e5e8ee;border-radius:14px;padding:11px;margin-top:9px;background:#fff}.pick h5{margin:0 0 6px;font-size:13px}.pick p{margin:0;color:#626b7b;font-size:12px;line-height:1.5}.pick .meta{margin-top:7px;font-size:11px;color:#7b8492}.pick-top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}.tag{font-size:10px;font-weight:800;padding:5px 7px;border-radius:999px;background:#e8f6ef;color:#176044;white-space:nowrap}.tag.alt{background:#fff3d8;color:#785400}.tag.red{background:#fdeaea;color:#8f2424}.source-note{font-size:11px;color:#7b8492;line-height:1.5;margin-top:10px;border-top:1px dashed #e2e5ea;padding-top:9px}
+.searchbuttons{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}.searchbuttons a{text-align:center;text-decoration:none;font-weight:800;border-radius:14px;padding:13px 10px;background:#111827;color:#fff}.searchbuttons a:nth-child(2){background:#e9edf5;color:#263042}.point{padding:12px 0;border-top:1px solid var(--line)}.point:first-of-type{border-top:0}.point b{display:block;margin-bottom:4px}.point small{color:var(--muted)}.footnote{font-size:12px;color:var(--muted);line-height:1.55;margin-top:12px}.travel-leg{display:grid;grid-template-columns:42px 1fr;gap:18px;align-items:center;margin:-2px 0 10px;position:relative}.travel-leg .spacer{height:1px}.travel-pill{display:flex;align-items:center;gap:8px;width:max-content;max-width:100%;background:#eef2f7;border:1px solid #dde3ec;color:#4e5869;border-radius:999px;padding:7px 11px;font-size:11px;font-weight:800}.travel-pill .mode{font-size:14px}.travel-pill strong{color:#111827}.travel-pill small{font-size:10px;font-weight:700;color:#7a8392}.travel-pill:before{content:"";position:absolute;left:52px;width:12px;height:2px;background:#dfe4ec}.travel-leg.rope .travel-pill{background:#eef6ff;border-color:#d7e8fb;color:#315b85}
+.finder-btn{display:block;width:100%;border:0;border-radius:14px;padding:14px 12px;margin-top:12px;background:#ef6c57;color:#fff;font:inherit;font-weight:800;font-size:15px;cursor:pointer}.finder-btn:disabled{opacity:.6;cursor:progress}.finder-btn:focus-visible,.searchbuttons a:focus-visible,.btn:focus-visible{outline:3px solid #2d65d8;outline-offset:2px}.finder-status{font-size:13px;color:#4c5566;line-height:1.55;margin-top:10px}.finder-status.err{color:#8f2424}.finder-list{display:grid;gap:8px;margin-top:10px}.wc{border:1px solid var(--line);border-radius:14px;padding:11px;background:#fff}.wc-top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}.wc-top b{font-size:14px;min-width:0;overflow-wrap:anywhere}.wc-dist{font-size:12px;font-weight:900;color:#176044;background:#e8f6ef;border-radius:999px;padding:4px 8px;white-space:nowrap;font-variant-numeric:tabular-nums}.wc-meta{font-size:12px;color:#707887;margin-top:4px;line-height:1.5}.wc .actions{margin-top:8px}.wc .btn{padding:8px 10px;font-size:12px}
+@media(max-width:720px){.gallery{grid-template-columns:1fr 1fr 1fr}.scene{min-height:105px;padding:9px}.scene .emoji{font-size:28px}.scene b{font-size:10px}.menu-list{grid-template-columns:1fr}.hero h1{font-size:25px}.grid{grid-template-columns:1fr}.timeline:before{left:48px}.time:after{left:41px}.stop{grid-template-columns:39px 1fr;gap:17px}.searchbuttons{grid-template-columns:1fr}}
+@media(max-width:430px){.gallery{grid-template-columns:1fr 1fr}.gallery .scene:nth-child(3){grid-column:1/-1;aspect-ratio:2/1}.section-title{align-items:flex-start;flex-direction:column;gap:3px}}
+</style>
+</head>
+<body><div class="wrap">
+<header class="hero"><div class="eyebrow">JAPAN FAMILY TRIP · V16</div><h1>Hakone Family Trip — <span style="white-space:nowrap">Day 1–2</span></h1><p>20–21 พฤศจิกายน 2026 · 12 คน · ผู้ใหญ่ 11 + เด็ก 1 · เดินทางด้วยรถเช่า</p><div class="badge">👵 ผู้สูงอายุ 65+ ประมาณ 4 คน</div></header>
+<input checked="" class="tabinput" id="tabday1" name="tabs" type="radio"/>
+<input class="tabinput" id="tabday2" name="tabs" type="radio"/>
+<input class="tabinput" id="tabtoilet" name="tabs" type="radio"/>
+<nav class="tabs"><label for="tabday1">🗓️ Day 1</label><label for="tabday2">🚡 Day 2</label><label for="tabtoilet">💩 ห้องน้ำ</label></nav>
+
+
+
+<section class="panel" id="day1">
+<div class="section-title"><h2>Day 1 · 20 พ.ย. — Haneda → Hakone</h2><small>แตะการ์ดเพื่อเปิดรายละเอียด</small></div>
+<div class="notice"><strong>เวอร์ชันล่าสุด:</strong> ปรับสนามบินเป็น Haneda, เพิ่ม Europcar/NICONICO, ตัด Ropeway/Owakudani ออกจากวันแรก และย้ายร้านอาหารทั้งหมดเป็น “แผนสำรอง”</div><div class="timeline">
+<div class="stop">
+<div class="time">06:55</div>
+<div class="card"><details><summary>
+<div class="head"><div class="icon">✈️</div><div><h3>Haneda Airport — Terminal 3</h3><div class="sub">TG682 ถึงญี่ปุ่น → ตม. → รับกระเป๋า → รวมสมาชิก</div></div><div class="chev">⌄</div></div>
+<div class="chips"><span class="chip good">TG682</span><span class="chip">06:55–09:00</span><span class="chip">Air LAWSON 24 ชม.</span></div>
+</summary><div class="details">
+<div class="gallery">
+<div class="scene s-air"><span class="emoji">✈️</span><div><b>Terminal 3</b><small>Arrival / Immigration / Baggage</small></div></div>
+<div class="scene s-shop"><span class="emoji">🏪</span><div><b>Air LAWSON</b><small>T3 ชั้น 1 · เปิด 24 ชั่วโมง</small></div></div>
+<div class="scene s-road"><span class="emoji">🧳</span><div><b>รวมสมาชิก</b><small>กลุ่ม 12 คน + กระเป๋า</small></div></div>
+</div>
+<p class="lead">การบินไทย TG682 ออกจากสุวรรณภูมิคืนวันที่ 19 พ.ย. และถึง Haneda Terminal 3 เวลา 06:55 น. เราเผื่อ ตม. รับกระเป๋า และรวมสมาชิกจนประมาณ 09:00 น.</p>
+<div class="grid">
+<div class="info"><b>เครื่องลง</b><span>06:55</span></div>
+<div class="info"><b>ออกจาก Arrival</b><span>ประมาณ 09:00</span></div>
+<div class="info"><b>ร้านสะดวกซื้อ</b><span>Air LAWSON · T3 1F</span></div>
+<div class="info"><b>เวลาเปิด</b><span>24 ชั่วโมง</span></div>
+</div>
+<h4>🏪 ร้านสะดวกซื้อใน Terminal 3</h4>
+<div class="pick"><div class="pick-top"><div><h5>Air LAWSON — Terminal 3 ชั้น 1</h5><p>อยู่ Entrance Plaza ก่อน Security เหมาะซื้อข้าวปั้น แซนด์วิช น้ำ กาแฟ ขนม และของใช้ก่อนออกไปรับรถ</p></div><span class="tag">24 ชั่วโมง</span></div></div>
+<div class="actions">
+<a class="btn" href="https://maps.apple.com/?saddr=Haneda%20Airport%20Terminal%203%20Arrival%20Lobby&amp;daddr=Haneda%20Airport%20Garden%2C%202-7-1%20Hanedakuko%2C%20Ota%20City%2C%20Tokyo&amp;dirflg=w">Apple Maps: Haneda T3 → จุดรับรถ</a>
+<a class="btn blue" href="https://tokyo-haneda.com/en/shop_and_dine/detail/tenant_00216.html">ดู Air LAWSON</a>
+<a class="btn light" href="https://tokyo-haneda.com/en/floor/terminal3/">แผนผัง Terminal 3</a>
+</div>
+</div></details></div>
+</div>
+<div class="travel-leg"><div class="spacer"></div><div class="travel-pill"><span class="mode">🚶</span><span><strong>Haneda T3 → Europcar / NICONICO</strong> · เผื่อประมาณ 15 นาที</span></div></div>
+<div class="stop">
+<div class="time">09:15</div>
+<div class="card"><details><summary>
+<div class="head"><div class="icon">🚗</div><div><h3>Europcar — Haneda Airport</h3><div class="sub">รับรถที่พาร์ตเนอร์ NICONICO · Haneda Airport Garden</div></div><div class="chev">⌄</div></div>
+<div class="chips"><span class="chip good">Klook booking</span><span class="chip">09:15–10:00</span><span class="chip">T3 เชื่อมถึงร้าน</span></div>
+</summary><div class="details">
+<div class="gallery">
+<div class="scene s-road"><span class="emoji">🚗</span><div><b>Europcar / NICONICO</b><small>รับรถตาม Klook voucher</small></div></div>
+<div class="scene s-room"><span class="emoji">🪪</span><div><b>เอกสารรับรถ</b><small>Passport / License / IDP / Card</small></div></div>
+<div class="scene s-road"><span class="emoji">🧳</span><div><b>จัดสัมภาระ</b><small>เผื่อเวลาสำหรับ 12 คน</small></div></div>
+</div>
+<p class="lead">สาขา NICONICO Haneda Airport อยู่ใน Haneda Airport Garden ที่เชื่อมกับ Terminal 3 โดยตรง ข้อมูลสาขาระบุเดินจาก Terminal 3 Station ประมาณ 5 นาที แต่เราตั้งเวลา 15 นาทีเพื่อเผื่อกลุ่มใหญ่และกระเป๋า</p>
+<div class="grid">
+<div class="info"><b>ถึงจุดรับรถ</b><span>ประมาณ 09:15</span></div>
+<div class="info"><b>รับรถเสร็จ</b><span>เป้าหมายประมาณ 10:00</span></div>
+<div class="info"><b>สาขา</b><span>Haneda Airport Garden 1F · 2-7-1 Hanedakuko, Ota-ku, Tokyo 144-0041</span></div>
+<div class="info"><b>เวลาเปิด</b><span>09:00–20:00</span></div>
+</div>
+<div class="source-note"><strong>วิธีเดินจริง:</strong> ร้านอยู่ <strong>Haneda Airport Garden ชั้น 1</strong> ไม่ได้อยู่ริมถนนด้านนอกสนามบิน จาก Arrival Lobby ชั้น 2 ของ Terminal 3 ให้เดินตรงเข้าทางเชื่อม Haneda Airport Garden แล้วลงลิฟต์ไปชั้น 1 ร้านอยู่ข้าง/ด้านหลังโถงลิฟต์ ใช้เวลาประมาณ 5 นาทีตามข้อมูลสาขา สำหรับกรุ๊ป 12 คนให้เผื่อ 10–15 นาที <strong>Apple Maps อาจวาดเส้นทางด้านนอกอาคารคลาดเคลื่อนได้</strong> หาก Klook Voucher ระบุจุดรับต่างจากนี้ ให้ยึด Voucher เป็นหลัก</div>
+<div class="actions">
+<a class="btn" href="https://maps.apple.com/?saddr=Haneda%20Airport%20Garden%2C%202-7-1%20Hanedakuko%2C%20Ota%20City%2C%20Tokyo&amp;daddr=EXPASA%20Ebina%20Downbound&amp;dirflg=d">Apple Maps: รับรถ → Ebina</a>
+<a class="btn blue" href="https://www.2525r.com/tokyo/ota/store-00001-021.html">ดูสาขา Haneda</a>
+</div>
+</div></details></div>
+</div>
+<div class="travel-leg"><div class="spacer"></div><div class="travel-pill"><span class="mode">🚗</span><span><strong>Europcar / Haneda → EXPASA Ebina</strong> · ประมาณ 50–60 นาที <small>(ขึ้นกับการจราจร)</small></span></div></div>
+<div class="stop">
+<div class="time">11:00</div>
+<div class="card"><details><summary>
+<div class="head"><div class="icon">🍱</div><div><h3>EXPASA Ebina Service Area — Downbound</h3><div class="sub">พักรถ + มื้อกลางวัน + ห้องน้ำใหญ่</div></div><div class="chev">⌄</div></div>
+<div class="chips"><span class="chip good">จุดพักบนไฮเวย์</span><span class="chip">11:00–12:00</span><span class="chip">3 ร้านที่คัดไว้</span></div>
+</summary><div class="details">
+<div class="gallery">
+<div class="scene s-road"><span class="emoji">🛣️</span><div><b>EXPASA Ebina</b><small>จุดพักใหญ่บน Tomei</small></div></div>
+<div class="scene s-sea"><span class="emoji">🍣</span><div><b>Seafood &amp; Ochazuke</b><small>ข้าวทะเล / ดาชิ</small></div></div>
+<div class="scene s-soba"><span class="emoji">🍜</span><div><b>Soba</b><small>กินง่าย เหมาะผู้สูงอายุ</small></div></div>
+</div>
+<p class="gallery-note"><strong>จุดเด่น:</strong> ที่จอดรถใหญ่ ห้องน้ำจำนวนมาก และร้านหลายประเภท เหมาะกับกรุ๊ป 12 คน</p>
+<div class="grid"><div class="info"><b>เวลา</b><span>11:00–12:00</span></div><div class="info"><b>งบอาหาร</b><span>ประมาณ ¥500–4,000/คน ตามร้าน</span></div></div>
+<h4>⭐ ร้านที่คัดไว้ 3 ร้าน</h4>
+<div class="pick"><div class="pick-top"><div><h5>1) 旬彩キッチン 潮の蔵 — Shunsai Kitchen Shio no Kura</h5><p><strong>บรรยากาศ:</strong> ร้านนั่งจริงจังใน Service Area เหมาะกับผู้สูงอายุและคนที่อยากนั่งพักสบาย</p></div><span class="tag">นั่งสบาย</span></div><div class="menu-list"><div class="menu-item"><b>まぐろ三昧丼</b><span>ข้าวหน้าทูน่า 3 แบบ</span></div><div class="menu-item"><b>あつぎ豚 とんかつ御膳</b><span>ชุดทงคัตสึหมู Atsugi ท้องถิ่น</span></div><div class="menu-item"><b>潮の蔵 天丼セット</b><span>เทมปุระ + โซบะ/อุด้ง</span></div></div><div class="meta">ประมาณ 10:00–22:00 · ¥1,000–4,000</div></div>
+<div class="pick"><div class="pick-top"><div><h5>2) こめらく 海鮮茶漬けとおむすびと。 — Kome-raku</h5><p><strong>บรรยากาศ:</strong> ฟู้ดคอร์ท สั่งแยกง่าย เหมาะถ้ากลุ่มอยากกินคนละอย่าง</p></div><span class="tag alt">เร็ว + กินง่าย</span></div><div class="menu-list"><div class="menu-item"><b>鮭といくらの北海ごはん</b><span>แซลมอน + ไข่ปลา แล้วเติมดาชิเป็นโอฉะซึเกะ</span></div><div class="menu-item"><b>おむすび</b><span>โอนิกิริหลายไส้ เหมาะซื้อถือขึ้นรถ</span></div></div><div class="meta">ประมาณ 07:00–21:00 · ¥500–2,000</div></div>
+<div class="pick"><div class="pick-top"><div><h5>3) 芝大門 更科布屋 — Shiba Daimon Sarashina Nunoya</h5><p><strong>บรรยากาศ:</strong> โซบะญี่ปุ่นคลาสสิก อุ่นท้องและไม่หนักเกินไป</p></div><span class="tag alt">24 ชั่วโมง</span></div><div class="menu-list"><div class="menu-item"><b>海老天そば</b><span>โซบะกุ้งเทมปุระ</span></div><div class="menu-item"><b>かき揚げそば</b><span>โซบะคาคิอาเกะ</span></div><div class="menu-item"><b>きつねそば</b><span>โซบะเต้าหู้หวาน กินง่าย</span></div></div><div class="meta">24 ชั่วโมง · ¥500–1,500</div></div>
+<div class="actions"><a class="btn" href="https://maps.apple.com/?saddr=EXPASA%20Ebina%20Downbound&amp;daddr=Hakone%20Kowakien%20Yunessun&amp;dirflg=d">Apple Maps: Ebina → Yunessun</a><a class="btn blue" href="https://sapa.c-nexco.co.jp/sapa/shop?sapainfoid=10">ดูร้าน/รูปจริง NEXCO</a></div>
+</div></details></div>
+</div>
+<div class="travel-leg"><div class="spacer"></div><div class="travel-pill"><span class="mode">🚗</span><span><strong>EXPASA Ebina → Hakone Kowakien Yunessun</strong> · ประมาณ 55–70 นาที <small>(ขึ้นกับการจราจร)</small></span></div></div>
+<div class="stop">
+<div class="time">13:00</div>
+<div class="card"><details><summary>
+<div class="head"><div class="icon">♨️</div><div><h3>Hakone Kowakien Yunessun</h3><div class="sub">ออนเซ็น/สวนน้ำแบบใส่ชุดว่ายน้ำ · เล่นช่วงบ่าย</div></div><div class="chev">⌄</div></div>
+<div class="chips"><span class="chip good">ครอบครัว</span><span class="chip">ใส่ชุดว่ายน้ำ</span><span class="chip">13:00–17:30 โดยประมาณ</span></div>
+</summary><div class="details">
+<div class="gallery">
+<div class="scene s-water"><span class="emoji">🏊</span><div><b>Warm-water Pool</b><small>เล่นได้ทั้งครอบครัว</small></div></div>
+<div class="scene s-wine"><span class="emoji">🍷</span><div><b>Wine Bath</b><small>บ่อธีมยอดนิยม</small></div></div>
+<div class="scene s-coffee"><span class="emoji">☕️</span><div><b>Coffee Bath</b><small>อีกหนึ่งบ่อซิกเนเจอร์</small></div></div>
+</div>
+<p class="lead">เด็ก ผู้ใหญ่ และผู้สูงอายุอยู่โซนเดียวกันได้เพราะเป็นโซนใส่ชุดว่ายน้ำ วันศุกร์โซน Yunessun เปิด 10:00–18:00 (เข้ารอบสุดท้าย 17:00)</p>
+<div class="grid">
+<div class="info"><b>เวลาในแผน</b><span>13:00–17:30 โดยประมาณ</span></div>
+<div class="info"><b>บัตรวัน A</b><span>ผู้ใหญ่ ¥2,500 / เด็ก ¥1,400</span></div>
+<div class="info"><b>65+</b><span>¥1,700 (แสดงหลักฐานอายุ)</span></div>
+<div class="info"><b>Private seat</b><span>เผื่อ 1–2 ชุด</span></div>
+</div>
+<h4>กิจกรรม</h4>
+<ul><li>สระน้ำอุ่นและบ่อธีม</li><li>บ่อไวน์ / บ่อกาแฟ</li><li>สไลเดอร์และโซนเด็กตามวันที่เปิด</li><li>Dr. Fish หากเปิด — จ่ายเพิ่ม</li></ul>
+<div class="pick" style="margin-top:12px"><div class="pick-top"><div><h5>🔐 ล็อกเกอร์ / ฝากกระเป๋า</h5><p>มีล็อกเกอร์หลักใกล้ห้องเปลี่ยนเสื้อผ้าใช้ฟรี ขนาดประมาณ 42×82×41 ซม. กระเป๋าใหญ่ที่ใส่ไม่พอฝากฟรอนต์ได้ประมาณ ¥200/ชิ้น และมี Everyone’s Changing Room สำหรับครอบครัว</p></div><span class="tag">มีให้ใช้</span></div></div>
+<div class="actions"><a class="btn" href="https://maps.apple.com/?saddr=Hakone%20Kowakien%20Yunessun&amp;daddr=Rakuten%20STAY%20TERRACE%20Hakone%20Kowakudani&amp;dirflg=d">Apple Maps: Yunessun → ที่พัก</a><a class="btn blue" href="https://www.yunessun.com/yunessun/">ดูรูปจริง/กิจกรรม Yunessun</a><a class="btn light" href="https://www.yunessun.com/service/price/">ราคา/เวลาเปิด</a></div>
+</div></details></div>
+</div>
+<div class="travel-leg"><div class="spacer"></div><div class="travel-pill"><span class="mode">🚗</span><span><strong>Yunessun → Rakuten STAY TERRACE Hakone Kowakudani</strong> · ประมาณ 5–10 นาที</span></div></div>
+<div class="stop">
+<div class="time">~18:00</div>
+<div class="card"><details><summary>
+<div class="head"><div class="icon">🏨</div><div><h3>Rakuten STAY TERRACE Hakone Kowakudani</h3><div class="sub">เข้าที่พัก · พักผ่อน · มื้อเย็นเลือกตามสถานการณ์</div></div><div class="chev">⌄</div></div>
+<div class="chips"><span class="chip good">จบแผนหลัก</span><span class="chip">ครัวในห้อง</span><span class="chip">ออนเซ็นส่วนตัว</span></div>
+</summary><div class="details">
+<div class="gallery">
+<div class="scene s-room"><span class="emoji">🛋️</span><div><b>Living Room</b><small>พื้นที่รวมกลุ่ม</small></div></div>
+<div class="scene s-kitchen"><span class="emoji">🍳</span><div><b>Kitchen &amp; Dining</b><small>ทำ/อุ่นอาหารได้</small></div></div>
+<div class="scene s-onsen"><span class="emoji">♨️</span><div><b>Private Onsen</b><small>พักผ่อนหลังวันเดินทาง</small></div></div>
+</div>
+<p class="lead">หลัง Yunessun ให้เข้าที่พักก่อนเป็นแผนหลัก ส่วนมื้อเย็น “ไม่ล็อกร้าน” — ร้านทั้งหมดด้านล่างเป็นแผนสำรอง จะเลือกตามแรงของทุกคนและเวลาจริงในวันนั้น</p>
+<div class="grid"><div class="info"><b>ถึงโดยประมาณ</b><span>ราว 18:00</span></div><div class="info"><b>ภายในห้อง</b><span>ครัว + พื้นที่กินข้าว</span></div><div class="info"><b>มื้อเย็น</b><span>เลือกจากแผนสำรอง</span></div><div class="info"><b>พัก</b><span>เตรียมตัวสำหรับวันถัดไป</span></div></div>
+<h4>🏪 ร้านสะดวกซื้อใกล้ที่พัก</h4>
+<div class="pick"><div class="pick-top"><div><h5>7-Eleven Hakone Kowakudani</h5><p>〒250-0406 Kanagawa, Hakone, Kowakudani 525-150 · เปิด 24 ชม. · เหมาะซื้ออาหารเช้า น้ำ และของกินดึก</p></div><span class="tag">🚶 ~15 นาที · 🚗 ~3 นาที</span></div><div class="meta">อันนี้เปลี่ยนจาก “ระยะเส้นตรง” เป็นเวลาเดินทางจริงโดยประมาณแล้ว ทางเดินมีเนินและบางช่วงไม่มีทางเท้า สำหรับผู้สูงอายุแนะนำขับรถแวะก่อนเข้าที่พัก</div><div class="actions"><a class="btn light" href="https://maps.apple.com/?saddr=483-2%20Kowakudani%2C%20Hakone%2C%20Kanagawa&amp;daddr=525-150%20Kowakudani%2C%20Hakone%2C%20Kanagawa&amp;dirflg=w">Apple Maps เดิน: ที่พัก → 7-Eleven</a><a class="btn light" href="https://maps.apple.com/?saddr=483-2%20Kowakudani%2C%20Hakone%2C%20Kanagawa&amp;daddr=525-150%20Kowakudani%2C%20Hakone%2C%20Kanagawa&amp;dirflg=d">Apple Maps รถ: ที่พัก → 7-Eleven</a></div></div>
+<div class="pick"><div class="pick-top"><div><h5>FamilyMart Hakone Kowakien</h5><p>〒250-0406 Kanagawa, Hakone, Kowakudani 493-4 · เปิด 07:00–23:00</p></div><span class="tag alt">🚶 ~10–15 นาที · 🚗 ~3–5 นาที</span></div><div class="meta">เวลาเดินเป็นช่วงประมาณจากเส้นทางจริงในย่านภูเขา ไม่ใช้ระยะเส้นตรง; เวลาขับอาจเพิ่มเล็กน้อยเมื่อรถติดช่วงใบไม้แดง</div><div class="actions"><a class="btn light" href="https://maps.apple.com/?saddr=483-2%20Kowakudani%2C%20Hakone%2C%20Kanagawa&amp;daddr=493-4%20Kowakudani%2C%20Hakone%2C%20Kanagawa&amp;dirflg=w">Apple Maps เดิน: ที่พัก → FamilyMart</a><a class="btn light" href="https://maps.apple.com/?saddr=483-2%20Kowakudani%2C%20Hakone%2C%20Kanagawa&amp;daddr=493-4%20Kowakudani%2C%20Hakone%2C%20Kanagawa&amp;dirflg=d">Apple Maps รถ: ที่พัก → FamilyMart</a></div></div>
+<div class="actions"><a class="btn blue" href="https://stay.rakuten.co.jp/en/terrace/hakone-kowakudani/">ดูรูปจริงที่พัก</a></div>
+</div></details></div>
+</div>
+</div>
+<div class="restaurant-box">
+<h3>🍽️ ร้านอาหารมื้อเย็น — ทั้งหมดเป็น “แผนสำรอง”</h3>
+<p class="lead" style="margin-top:4px">ไม่ล็อกร้านหลัก วันจริงดูแรงของทุกคนก่อน แล้วค่อยเลือก โดยชุดแรกด้านล่างเน้น <strong>ร้านโลคอล/ร้านดังของ Hakone</strong> มากกว่าความสามารถในการนั่งพร้อมกัน 12 คน</p>
+<div class="notice"><strong>หมายเหตุ:</strong> ร้านดังหลายร้านใน Hakone ปิดเร็วและไม่รับจอง ถ้าอยากลองร้านไหนจริงให้เช็กเวลาหน้างานอีกครั้ง เพราะวันที่เราไปคือวันศุกร์ 20 พ.ย.</div>
+<div class="backup-grid">
+<div class="backup-card"><details><summary><div class="head"><div class="icon">🥘</div><div><h3>Tamura Ginkatsu-tei Honten</h3><div class="sub">強羅 · ร้านดังเต้าหู้คัตสึ · โลคอลมาก</div></div><div class="chev">⌄</div></div><div class="chips"><span class="chip good">ดังมาก</span><span class="chip">ศุกร์ 17:00–19:00</span><span class="chip">ไม่รับจอง</span></div></summary><div class="details">
+<div class="gallery"><div class="scene s-food"><span class="emoji">🥘</span><div><b>Tofu Katsu-ni</b><small>เมนูซิกเนเจอร์</small></div></div><div class="scene s-room"><span class="emoji">🏮</span><div><b>Gora Local</b><small>ร้านดังใกล้สถานี Gora</small></div></div><div class="scene s-food"><span class="emoji">🍚</span><div><b>Set Meal</b><small>กินกับข้าวร้อน ๆ</small></div></div></div>
+<p class="lead">ร้านดังของ Gora ที่คนมาฮาโกเน่มักตามมากิน เมนูเด่นคือ <strong>豆腐かつ煮 (Tofu Katsu-ni)</strong> — เต้าหู้พิเศษสอดหมูบด ชุบทอด แล้วตุ๋นกับไข่ในหม้อดิน</p>
+<div class="menu-list"><div class="menu-item"><b>豆腐かつ煮定食</b><span>Tofu Katsu-ni set · เมนูต้องลองของร้าน</span></div><div class="menu-item"><b>銀かつ丼</b><span>ข้าวหน้าคัตสึรวมหลายแบบ</span></div><div class="menu-item"><b>もち豚とんかつ</b><span>ทงคัตสึหมู Mochibuta</span></div></div>
+<div class="meta">วันศุกร์ 11:00–14:30 / 17:00–19:00 · ร้านดังจึงมีโอกาสต้องรอคิว</div>
+<div class="actions"><a class="btn" href="https://maps.apple.com/?saddr=Hakone%20Kowakien%20Yunessun&amp;daddr=Tamura%20Ginkatsu-tei%20Honten&amp;dirflg=d">Apple Maps: Yunessun → Tamura</a><a class="btn blue" href="https://www.hakonenavi.jp/spot/1253">ดูรูป/ข้อมูลร้าน</a></div>
+</div></details></div>
+<div class="backup-card"><details><summary><div class="head"><div class="icon">🥟</div><div><h3>Gyoza Center</h3><div class="sub">彫刻の森 / Gora · ร้านเกี๊ยวซ่าดังของ Hakone</div></div><div class="chev">⌄</div></div><div class="chips"><span class="chip good">โลคอลดัง</span><span class="chip">ศุกร์ 17:00–19:30</span><span class="chip">ไม่รับจอง</span></div></summary><div class="details">
+<div class="gallery"><div class="scene s-food"><span class="emoji">🥟</span><div><b>Gyoza</b><small>หลายไส้ หลายแบบ</small></div></div><div class="scene s-food"><span class="emoji">🌶️</span><div><b>Kimchi Soup Gyoza</b><small>เกี๊ยวซ่าน้ำกิมจิ</small></div></div><div class="scene s-room"><span class="emoji">🍺</span><div><b>Casual Local</b><small>บรรยากาศง่าย ๆ</small></div></div></div>
+<p class="lead">ร้านเกี๊ยวซ่าเก่าแก่แถว Chokoku-no-Mori เป็นตัวเลือกที่สนุกและโลคอลมาก เมนูมีทั้งเกี๊ยวซ่าปกติและรสแปลก ๆ</p>
+<div class="menu-list"><div class="menu-item"><b>ノーマル餃子</b><span>เกี๊ยวซ่าปกติ · เมนูพื้นฐานของร้าน</span></div><div class="menu-item"><b>スタミナ餃子</b><span>Stamina Gyoza · มีกระเทียมทั้งกลีบด้านใน</span></div><div class="menu-item"><b>キムチすい餃子</b><span>Kimchi Soup Gyoza · ซุปกิมจิร้อน ๆ</span></div></div>
+<div class="meta">วันศุกร์ 11:30–14:30 / 17:00–19:30 · ราคาทั่วไปประมาณ ¥1,000–2,000/คน</div>
+<div class="actions"><a class="btn" href="https://maps.apple.com/?saddr=Hakone%20Kowakien%20Yunessun&amp;daddr=Gyoza%20Center%20Hakone&amp;dirflg=d">Apple Maps: Yunessun → Gyoza Center</a><a class="btn blue" href="https://hakone-gyozacenter.com/">ดูร้านจริง</a></div>
+</div></details></div>
+<div class="backup-card"><details><summary><div class="head"><div class="icon">🍣</div><div><h3>Hakone Kappei (かっ平寿し)</h3><div class="sub">Ninotaira · ซูชิเล็ก ๆ โลคอล · ใกล้โซนที่พัก</div></div><div class="chev">⌄</div></div><div class="chips"><span class="chip good">ใกล้</span><span class="chip">ศุกร์ 16:30–20:00</span><span class="chip">ร้านเล็ก</span></div></summary><div class="details">
+<div class="gallery"><div class="scene s-sea"><span class="emoji">🍣</span><div><b>Inari Sushi</b><small>สูตรลับกว่า 30 ปี</small></div></div><div class="scene s-sea"><span class="emoji">🐟</span><div><b>Maguro Don</b><small>ข้าวหน้าทูน่า</small></div></div><div class="scene s-room"><span class="emoji">🏮</span><div><b>Small Local Sushi</b><small>บรรยากาศร้านเล็ก</small></div></div></div>
+<p class="lead">ร้านซูชิโลคอลใกล้ Chokoku-no-Mori จุดเด่นคือ <strong>秘伝特製いなり寿司</strong> อินาริสูตรลับที่ทำต่อเนื่องมากว่า 30 ปี</p>
+<div class="menu-list"><div class="menu-item"><b>秘伝特製いなり寿司</b><span>อินาริซูชิสูตรลับ · ของดังร้าน</span></div><div class="menu-item"><b>ネギトロ丼</b><span>ข้าวหน้าทูน่าสับ</span></div><div class="menu-item"><b>穴子丼 / サーモン丼</b><span>ข้าวหน้าปลาไหลทะเล / แซลมอน</span></div></div>
+<div class="meta">ร้านประมาณ 16 ที่นั่ง + เสื่อทาทามิบางส่วน · ของอาจหมดก่อนเวลาปิด</div>
+<div class="actions"><a class="btn" href="https://maps.apple.com/?saddr=Hakone%20Kowakien%20Yunessun&amp;daddr=Hakone%20Kappei&amp;dirflg=d">Apple Maps: Yunessun → Kappei</a><a class="btn blue" href="https://www.hakonenavi.jp/spot/905">ดูรูป/ข้อมูลร้าน</a></div>
+</div></details></div>
+<div class="backup-card"><details><summary><div class="head"><div class="icon">🍲</div><div><h3>Yubadon Naokichi (湯葉丼 直吉)</h3><div class="sub">Hakone-Yumoto · ยูบะดงชื่อดัง · ต้องไปเร็ว</div></div><div class="chev">⌄</div></div><div class="chips"><span class="chip good">Must-eat Hakone</span><span class="chip">ปิด 18:00</span><span class="chip">ไม่รับจอง</span></div></summary><div class="details">
+<div class="gallery"><div class="scene s-food"><span class="emoji">🍲</span><div><b>Yuba Don</b><small>ยูบะ + ไข่ + ดาชิ</small></div></div><div class="scene s-water"><span class="emoji">💧</span><div><b>Hakone Spring Water</b><small>ใช้น้ำขึ้นชื่อของ Hakone</small></div></div><div class="scene s-room"><span class="emoji">♨️</span><div><b>Yumoto</b><small>ร้านดังใกล้สถานี</small></div></div></div>
+<p class="lead">Hakone Navi ระบุว่า <strong>Yubadon</strong> ของร้านนี้เป็นเมนูที่ “ควรกินเมื่อมา Hakone” ทำจากยูบะสด น้ำขึ้นชื่อของ Hakone และดาชิ</p>
+<div class="menu-list"><div class="menu-item"><b>湯葉丼</b><span>Yuba Don · เมนูซิกเนเจอร์</span></div><div class="menu-item"><b>湯葉刺し</b><span>ยูบะสด เนื้อสัมผัสนุ่ม</span></div><div class="menu-item"><b>甘味</b><span>ขนมญี่ปุ่น/ของหวานตามร้าน</span></div></div>
+<div class="meta">ศุกร์ 11:00–18:00 · ไม่รับจอง · ตัวนี้ต้องออกจาก Yunessun เร็วกว่าปกติจึงจะทัน</div>
+<div class="actions"><a class="btn" href="https://maps.apple.com/?saddr=Hakone%20Kowakien%20Yunessun&amp;daddr=Yubadon%20Naokichi&amp;dirflg=d">Apple Maps: Yunessun → Naokichi</a><a class="btn blue" href="https://www.hakonenavi.jp/international/en/spot/114">ดูรูป/ข้อมูลร้าน</a></div>
+</div></details></div>
+<div class="backup-card"><details><summary><div class="head"><div class="icon">🔥</div><div><h3>IRORISARYO Hachiri</h3><div class="sub">Hakone Yuryo · อิโรริ/อาหารญี่ปุ่น · ตัวสำรองเดิม</div></div><div class="chev">⌄</div></div><div class="chips"><span class="chip">สำรอง</span><span class="chip">ร้านใหญ่</span><span class="chip">คอร์สอิโรริ</span></div></summary><div class="details">
+<div class="gallery"><div class="scene s-irori"><span class="emoji">🔥</span><div><b>Irori Hearth</b><small>เตาถ่านแบบญี่ปุ่น</small></div></div><div class="scene s-food"><span class="emoji">🐟</span><div><b>Ashigara Trout</b><small>ปลาเทราต์ท้องถิ่น</small></div></div><div class="scene s-room"><span class="emoji">🏮</span><div><b>Japanese Atmosphere</b><small>เหมาะกรุ๊ปมากกว่า</small></div></div></div>
+<p class="lead">ถ้าอยากได้ร้านที่จัดการกลุ่มใหญ่ได้ง่ายกว่าร้านโลคอลเล็ก ๆ ร้านนี้ยังเป็นตัวสำรองที่ดี</p>
+<div class="menu-list"><div class="menu-item"><b>Autumn Irori Course</b><span>¥6,500/คน · เป็นคอร์สต่อคน ไม่ใช่ราคาเหมาทั้งโต๊ะ</span></div><div class="menu-item"><b>Autumn Special Course</b><span>¥8,500/คน · เพิ่มซาชิมิ เนื้อญี่ปุ่น และเทมปุระ</span></div><div class="menu-item"><b>八里御膳</b><span>Set meal ราคาย่อมลง</span></div></div>
+<div class="actions"><a class="btn" href="https://maps.apple.com/?saddr=Hakone%20Kowakien%20Yunessun&amp;daddr=Hakone%20Yuryo&amp;dirflg=d">Apple Maps: Yunessun → Hachiri</a><a class="btn blue" href="https://www.hakoneyuryo.jp/english/restaurant/">Restaurant page</a><a class="btn light" href="https://www.hakoneyuryo.jp/assets/file/irori_2609.pdf">Autumn menu PDF</a></div>
+</div></details></div>
+</div>
+<div class="source-note" style="margin-top:14px">ร้านโลคอลด้านบนคัดจากข้อมูล Hakone Navi / Tabelog / เว็บไซต์ร้านล่าสุด ณ ก.ย. 2026 เวลาเปิดอาจเปลี่ยนได้ โดยเฉพาะช่วงฤดูใบไม้เปลี่ยนสี</div>
+</div>
+</section>
+<section class="panel" id="day2">
+<div class="section-title"><h2>Day 2 · 21 พ.ย. — Hakone → Kawaguchiko</h2><small>แตะการ์ดเพื่อเปิดรายละเอียด</small></div>
+<div class="notice"><strong>แนวทางวันนี้:</strong> ช่วงเช้าเก็บวิวก่อน เพราะฟูจิมีโอกาสเห็นชัดกว่าช่วงบ่าย จากนั้นใช้ <strong>Togendai เป็นฐาน</strong> จอดรถครั้งเดียวสำหรับ Ropeway + Pirate Ship แล้วค่อยขับต่อไป Oshino Hakkai และที่พักคืนที่ 2</div>
+<div class="timeline">
+<div class="stop"><div class="time">07:30</div><div class="card"><details><summary><div class="head"><div class="icon">🏨</div><div><h3>ออกจาก Rakuten STAY TERRACE Hakone Kowakudani</h3><div class="sub">เช็กเอาต์ · เอากระเป๋าขึ้นรถทั้งหมด</div></div><div class="chev">⌄</div></div><div class="chips"><span class="chip good">เริ่มเช้า</span><span class="chip">ผู้สูงอายุ 4 คน</span></div></summary><div class="details"><p class="lead">วันนี้ย้ายที่พักไปฝั่ง Kawaguchiko จึงเช็กเอาต์แล้วออกพร้อมสัมภาระทั้งหมด ไม่ต้องย้อนกลับมาที่พักเดิม</p><div class="actions"><a class="btn" href="https://maps.apple.com/?saddr=Rakuten%20STAY%20TERRACE%20Hakone%20Kowakudani&amp;daddr=Hakone%20Shrine&amp;dirflg=d">Apple Maps: ที่พัก → Hakone Shrine</a></div></div></details></div></div>
+<div class="travel-leg"><div class="spacer"></div><div class="travel-pill"><span class="mode">🚗</span><strong>ประมาณ 20–25 นาที</strong><small> Kowakudani → Hakone Shrine</small></div></div>
+<div class="stop"><div class="time">07:55</div><div class="card"><details open=""><summary><div class="head"><div class="icon">⛩️</div><div><h3>Hakone Shrine / Lake Ashi</h3><div class="sub">ศาลเจ้าหลักของทริป · วิว Torii + Lake Ashi</div></div><div class="chev">⌄</div></div><div class="chips"><span class="chip good">วิวสวยตอนเช้า</span><span class="chip good">มีทางวีลแชร์</span><span class="chip">จอดรถ P3 ถ้าเดินลำบาก</span></div></summary><div class="details">
+<div class="gallery"><div class="scene s-fuji"><span class="emoji">⛩️</span><div><b>Peace Torii</b><small>ประตูแดงริม Lake Ashi</small></div></div><div class="scene s-mountain"><span class="emoji">🌲</span><div><b>Cedar Forest</b><small>บรรยากาศป่าสน</small></div></div><div class="scene s-water"><span class="emoji">♿</span><div><b>Accessible Route</b><small>ลิฟต์จาก Treasure Hall</small></div></div></div>
+<p class="lead">เผื่อประมาณ 40 นาที สำหรับไหว้ศาลเจ้า ถ่ายรูปริมทะเลสาบ และเข้าห้องน้ำ ผู้ใช้วีลแชร์/ผู้ที่เดินลำบากให้ใช้ <strong>Parking No.3</strong> และลิฟต์ของ Treasure Hall แทนบันไดหินราว 90 ขั้น</p>
+<div class="grid"><div class="info"><b>ค่าเข้า</b><span>ฟรี</span></div><div class="info"><b>วีลแชร์</b><span>เข้าศาลเจ้าหลักได้ด้วยลิฟต์ แต่ Peace Torii ริมน้ำมีขั้นบางช่วง</span></div></div>
+<div class="actions"><a class="btn blue" href="https://hakonejinja.or.jp/hakone/keidai.html">ข้อมูลทางการ / Accessibility</a><a class="btn" href="https://maps.apple.com/?q=Hakone%20Shrine">Apple Maps</a></div>
+</div></details></div></div>
+<div class="travel-leg"><div class="spacer"></div><div class="travel-pill"><span class="mode">🚗</span><strong>ประมาณ 10–15 นาที</strong><small> Hakone Shrine → Taikanzan</small></div></div>
+<div class="stop"><div class="time">08:50</div><div class="card"><details><summary><div class="head"><div class="icon">🗻</div><div><h3>Taikanzan Observatory</h3><div class="sub">จุดชม Fuji + Lake Ashi แบบพาโนรามา</div></div><div class="chev">⌄</div></div><div class="chips"><span class="chip good">แวะสั้นแต่คุ้ม</span><span class="chip">15–20 นาที</span><span class="chip good">รถเข้าถึงง่าย</span></div></summary><div class="details">
+<div class="gallery"><div class="scene s-fuji"><span class="emoji">🗻</span><div><b>Mt. Fuji</b><small>ถ้าฟ้าเปิดช่วงเช้าสวยมาก</small></div></div><div class="scene s-water"><span class="emoji">🌊</span><div><b>Lake Ashi</b><small>เห็นทะเลสาบจากมุมสูง</small></div></div><div class="scene s-road"><span class="emoji">🚗</span><div><b>Drive-up View</b><small>ไม่ต้องเดินไกล</small></div></div></div>
+<p class="lead">จุดนี้เหมาะกับบ้านเรามาก เพราะเป็นจุดชมวิวสำหรับรถยนต์ ไม่ต้องเดินไกล ถ้าวันนั้นฟ้าปิดให้ลดเวลาเหลือ 5–10 นาทีแล้วไป Togendai ต่อได้เลย</p>
+<div class="grid"><div class="info"><b>ค่าเข้าจุดชมวิว</b><span>ฟรี</span></div><div class="info"><b>ห้องน้ำ</b><span>มีที่ Sky Lounge / ลานจอด</span></div></div>
+<div class="actions"><a class="btn" href="https://maps.apple.com/?saddr=Hakone%20Shrine&amp;daddr=Taikanzan%20Observatory&amp;dirflg=d">Apple Maps: Shrine → Taikanzan</a><a class="btn blue" href="https://www.hakonenavi.jp/international/en/article/2514">ดูข้อมูลวิว Hakone</a></div>
+</div></details></div></div>
+<div class="travel-leg"><div class="spacer"></div><div class="travel-pill"><span class="mode">🚗</span><strong>ประมาณ 25 นาที</strong><small> Taikanzan → Togendai</small></div></div>
+<div class="stop"><div class="time">09:35</div><div class="card"><details><summary><div class="head"><div class="icon">🅿️</div><div><h3>Togendai Station — ฐานจอดรถของวันนี้</h3><div class="sub">Ropeway + Pirate Ship อยู่สถานีเดียวกัน</div></div><div class="chev">⌄</div></div><div class="chips"><span class="chip good">เหมาะกับวีลแชร์</span><span class="chip good">มีลิฟต์/ทางลาด</span><span class="chip">มีห้องน้ำ</span></div></summary><div class="details">
+<p class="lead">จอดรถไว้ที่ Togendai แล้วใช้กระเช้าและเรือจากสถานีเดียวกัน ช่วยลดการย้ายรถหลายรอบ สถานีมีลิฟต์ ทางลาด ห้องน้ำ ล็อกเกอร์ และที่จอดรถ</p>
+<div class="actions"><a class="btn" href="https://maps.apple.com/?saddr=Taikanzan%20Observatory&amp;daddr=Togendai%20Station&amp;dirflg=d">Apple Maps: Taikanzan → Togendai</a><a class="btn blue" href="https://www.hakonenavi.jp/international/en/station/togendai2">ข้อมูลสถานี</a></div>
+</div></details></div></div>
+<div class="travel-leg rope"><div class="spacer"></div><div class="travel-pill"><span class="mode">🚡</span><strong>ประมาณ 20 นาที</strong><small> Togendai → Ubako → Owakudani</small></div></div>
+<div class="stop"><div class="time">09:50</div><div class="card"><details><summary><div class="head"><div class="icon">🚡</div><div><h3>Hakone Ropeway → Owakudani</h3><div class="sub">กระเช้า 2 ช่วง · วิว Lake Ashi + Fuji</div></div><div class="chev">⌄</div></div><div class="chips"><span class="chip good">เปิด 09:00–17:00</span><span class="chip">ออกประมาณทุก 1 นาที</span><span class="chip warn">ขึ้นกับลม/อากาศ</span></div></summary><div class="details">
+<div class="gallery"><div class="scene s-fuji"><span class="emoji">🚡</span><div><b>Ropeway</b><small>แต่ละช่วงประมาณ 10 นาที</small></div></div><div class="scene s-water"><span class="emoji">🌊</span><div><b>Lake Ashi View</b><small>ฝั่ง Togendai วิวสวย</small></div></div><div class="scene s-fuji"><span class="emoji">🗻</span><div><b>Fuji View</b><small>มีโอกาสเห็นเมื่อฟ้าเปิด</small></div></div></div>
+<p class="lead">เส้น Togendai → Owakudani ผ่าน Ubako ใช้ประมาณ 20 นาทีรวม 2 ช่วง กระเช้าจุ 18 คน จึงเหมาะกับกลุ่ม 12 คนของเรา แต่ถ้าลมแรงอาจหยุดเดินรถได้</p>
+<div class="actions"><a class="btn blue" href="https://www.hakonenavi.jp/hakone-ropeway/">Hakone Ropeway ทางการ</a></div>
+</div></details></div></div>
+<div class="stop"><div class="time">10:10</div><div class="card"><details><summary><div class="head"><div class="icon">🥚</div><div><h3>Owakudani — กินไข่ดำ</h3><div class="sub">จุดภูเขาไฟ · Kuro-tamago · จุดชมวิวใหม่</div></div><div class="chev">⌄</div></div><div class="chips"><span class="chip good">ไฮไลต์ Day 2</span><span class="chip">ประมาณ 50 นาที</span><span class="chip good">มีลิฟต์/ห้องน้ำ</span></div></summary><div class="details">
+<div class="gallery"><div class="scene s-black"><span class="emoji">🥚</span><div><b>Kuro-tamago</b><small>ไข่ดำขึ้นชื่อของ Owakudani</small></div></div><div class="scene s-mountain"><span class="emoji">🌋</span><div><b>Volcanic Valley</b><small>ไอภูเขาไฟและภูมิประเทศ</small></div></div><div class="scene s-fuji"><span class="emoji">📸</span><div><b>Chikyu no Tani</b><small>จุดชมวิวเปิดใหม่</small></div></div></div>
+<p class="lead">อยู่ประมาณ 50 นาทีเพื่อกินไข่ดำ ซื้อของฝาก ถ่ายรูป และเข้าห้องน้ำ ไม่ใส่ Nature Trail ในแผนหลักเพื่อไม่ให้ผู้สูงอายุเหนื่อยเกินไป</p>
+<div class="grid"><div class="info"><b>เปิด</b><span>ช่วง พ.ย. Ropeway 09:00–17:00</span></div><div class="info"><b>Accessibility</b><span>สถานีมีลิฟต์และห้องน้ำ; จุดชมบางส่วนอาจมีความชัน</span></div></div>
+<div class="actions"><a class="btn blue" href="https://www.hakonenavi.jp/spot/1362">Owakudani ทางการ</a></div>
+</div></details></div></div>
+<div class="travel-leg rope"><div class="spacer"></div><div class="travel-pill"><span class="mode">🚡</span><strong>ประมาณ 20 นาที</strong><small> Owakudani → Togendai</small></div></div>
+<div class="stop"><div class="time">11:20</div><div class="card"><details><summary><div class="head"><div class="icon">🏴‍☠️</div><div><h3>Hakone Pirate Ship → Moto-Hakone</h3><div class="sub">ล่อง Lake Ashi · เลือกเที่ยวเรือใกล้สุดหลังกลับจาก Owakudani</div></div><div class="chev">⌄</div></div><div class="chips"><span class="chip good">เด็กสนุก</span><span class="chip good">วีลแชร์ได้</span><span class="chip">25–40 นาที/เที่ยว</span></div></summary><div class="details">
+<div class="gallery"><div class="scene s-water"><span class="emoji">🏴‍☠️</span><div><b>Pirate Ship</b><small>เรือธีมโจรสลัด</small></div></div><div class="scene s-fuji"><span class="emoji">🗻</span><div><b>Lake + Fuji</b><small>ถ้าฟ้าเปิด</small></div></div><div class="scene s-sea"><span class="emoji">♿</span><div><b>Barrier-free</b><small>ทางลาด ลิฟต์ ห้องน้ำอเนกประสงค์</small></div></div></div>
+<p class="lead">เรือเชื่อม Togendai กับ Hakone-machi / Moto-Hakone ใช้ประมาณ 25–40 นาที ขึ้นอยู่กับเที่ยวเรือ ทั้ง 3 ลำรองรับวีลแชร์และมีห้องน้ำบนเรือ</p>
+<div class="notice"><strong>เวลาเรือ:</strong> ยังไม่ล็อกนาทีเป๊ะในเว็บนี้ เพราะตารางอาจปรับตามฤดูกาล ให้เช็ก timetable ทางการใกล้วัน 21 พ.ย. แล้วเลือกเที่ยวที่ต่อจาก Ropeway ได้ดีที่สุด</div>
+<div class="actions"><a class="btn blue" href="https://www.hakonenavi.jp/hakone-kankosen/">ตาราง/ตั๋ว Pirate Ship</a></div>
+</div></details></div></div>
+<div class="travel-leg"><div class="spacer"></div><div class="travel-pill"><span class="mode">🚶</span><strong>ประมาณ 1 นาที</strong><small> Moto-Hakone Port → Ashinoko Chaya</small></div></div>
+<div class="stop"><div class="time">12:15</div><div class="card"><details open=""><summary><div class="head"><div class="icon">🍱</div><div><h3>มื้อกลางวัน — Ashinoko Chaya</h3><div class="sub">ติด Moto-Hakone Port · วิว Lake Ashi · เดินน้อย</div></div><div class="chev">⌄</div></div><div class="chips"><span class="chip good">เหมาะกับผู้สูงอายุ</span><span class="chip">11:15–16:00</span><span class="chip good">วิวเรือ Pirate Ship</span></div></summary><div class="details">
+<div class="gallery"><div class="scene s-food"><span class="emoji">🍚</span><div><b>Clay-pot Rice</b><small>ข้าวหุงหม้อดิน</small></div></div><div class="scene s-food"><span class="emoji">🥩</span><div><b>Japanese Set</b><small>เนื้อ/ไก่ + เครื่องเคียง</small></div></div><div class="scene s-water"><span class="emoji">🌊</span><div><b>Lake View</b><small>ชั้น 2 มองเห็น Lake Ashi</small></div></div></div>
+<p class="lead">ร้านอยู่ใกล้ท่าเรือมาก เหมาะกับกลุ่มที่มีผู้สูงอายุ ทุกเมนูอาหารหลักมีโอบันไซแบบบุฟเฟต์ระหว่างรอข้าวหุงหม้อดิน</p>
+<div class="menu-list"><div class="menu-item"><b>うなぎととろろ</b><span>ปลาไหล + โทโรโระ ¥3,450</span></div><div class="menu-item"><b>国産牛としぐれ煮</b><span>เนื้อวัวญี่ปุ่น + ชิกุเระนิ ¥2,680</span></div><div class="menu-item"><b>富嶽白鶏ステーキ</b><span>สเต๊กไก่ Fujiyama Hakkei ¥2,580</span></div></div>
+<div class="actions"><a class="btn" href="https://maps.apple.com/?saddr=Moto-Hakone%20Port&amp;daddr=Ashinoko%20Chaya&amp;dirflg=w">Apple Maps: เดินจากท่าเรือ</a><a class="btn blue" href="https://www.hakonenavi.jp/ourbrand/ashinokochaya/">เมนูทางการ</a></div>
+</div></details></div></div>
+<div class="stop"><div class="time">13:20</div><div class="card"><details><summary><div class="head"><div class="icon">⛴️</div><div><h3>Pirate Ship กลับ Togendai</h3><div class="sub">กลับไปรับรถที่จอดไว้</div></div><div class="chev">⌄</div></div><div class="chips"><span class="chip">เลือกเที่ยวถัดไปหลังอาหาร</span><span class="chip good">นั่งพักได้</span></div></summary><div class="details"><p class="lead">หลังมื้อกลางวันนั่งเรือกลับ Togendai เพื่อรับรถ แล้วออกจาก Hakone ไปฝั่ง Fuji Five Lakes ต่อ</p><div class="actions"><a class="btn blue" href="https://www.hakonenavi.jp/hakone-kankosen/">เช็กตารางเรือ</a></div></div></details></div></div>
+<div class="travel-leg"><div class="spacer"></div><div class="travel-pill"><span class="mode">🚗</span><strong>ประมาณ 40–45 นาที</strong><small> Togendai → Oshino Hakkai</small></div></div>
+<div class="stop"><div class="time">15:00</div><div class="card"><details open=""><summary><div class="head"><div class="icon">💧</div><div><h3>Oshino Hakkai — หมู่บ้านน้ำใส</h3><div class="sub">แวะระหว่าง Hakone → Kawaguchiko</div></div><div class="chev">⌄</div></div><div class="chips"><span class="chip good">วิว Fuji</span><span class="chip good">ของกินโลคอล</span><span class="chip warn">วีลแชร์ได้เฉพาะบางบ่อ</span></div></summary><div class="details">
+<div class="gallery"><div class="scene s-water"><span class="emoji">💧</span><div><b>Eight Ponds</b><small>น้ำจากหิมะฟูจิกรองผ่านชั้นหิน</small></div></div><div class="scene s-fuji"><span class="emoji">🗻</span><div><b>Mt. Fuji</b><small>หมู่บ้าน + ฟูจิ</small></div></div><div class="scene s-food"><span class="emoji">🍡</span><div><b>Local Snacks</b><small>โมจิ เต้าหู้ ของกินท้องถิ่น</small></div></div></div>
+<p class="lead">เผื่อประมาณ 60 นาที เดินเฉพาะโซนหลัก ไม่จำเป็นต้องเก็บครบทั้ง 8 บ่อ สำหรับวีลแชร์ ทางการระบุว่า <strong>Waku Pond และ Kagami Pond</strong> อยู่ติดถนนลาดยางและเข้าถึงได้ง่ายกว่า</p>
+<div class="grid"><div class="info"><b>ค่าเข้าพื้นที่หลัก</b><span>ฟรี (พิพิธภัณฑ์บางส่วนมีค่าเข้า)</span></div><div class="info"><b>ที่จอดรถ</b><span>ที่จอดเอกชนรอบพื้นที่ประมาณ ¥300/รถทั่วไป</span></div></div>
+<div class="actions"><a class="btn" href="https://maps.apple.com/?saddr=Togendai%20Station&amp;daddr=Oshino%20Hakkai&amp;dirflg=d">Apple Maps: Togendai → Oshino</a><a class="btn blue" href="https://www.japan.travel/en/spot/1327/">ข้อมูล JNTO</a><a class="btn light" href="https://www.vill.oshino.lg.jp/page/1634.html">ข้อมูลวีลแชร์</a></div>
+</div></details></div></div>
+<div class="travel-leg"><div class="spacer"></div><div class="travel-pill"><span class="mode">🚗</span><strong>ประมาณ 15–20 นาที</strong><small> Oshino Hakkai → Bamboo Yado / Kawaguchiko</small></div></div>
+<div class="stop"><div class="time">16:20</div><div class="card"><details open=""><summary><div class="head"><div class="icon">🏡</div><div><h3>Bamboo Yado｜竹の宿</h3><div class="sub">ที่พักคืนที่ 2 · Kawaguchiko · บ้านพักทั้งหลัง</div></div><div class="chev">⌄</div></div><div class="chips"><span class="chip good">รองรับกลุ่มใหญ่</span><span class="chip">มีครัว</span><span class="chip good">พักหลังเที่ยวเต็มวัน</span></div></summary><div class="details">
+<div class="gallery"><div class="scene s-room"><span class="emoji">🏡</span><div><b>Whole House</b><small>บ้านพักสำหรับกลุ่มใหญ่</small></div></div><div class="scene s-kitchen"><span class="emoji">🍳</span><div><b>Kitchen</b><small>มีครัวและไมโครเวฟ</small></div></div><div class="scene s-water"><span class="emoji">🌊</span><div><b>Lake Area</b><small>อยู่โซน Kawaguchiko</small></div></div></div>
+<p class="lead">จบ Day 2 ที่ที่พักก่อนค่ำ ตัวที่พักเป็นบ้านทั้งหลัง รองรับได้ถึงประมาณ 16 คน มีครัวและ Wi‑Fi เหมาะกับกลุ่ม 12 คนของเรา</p>
+<div class="actions"><a class="btn" href="https://maps.apple.com/?saddr=Oshino%20Hakkai&amp;daddr=Bamboo%20Yado%20Fujikawaguchiko&amp;dirflg=d">Apple Maps: Oshino → ที่พัก</a><a class="btn blue" href="https://www.google.com/travel/hotels/entity/ChoI98exhIGR3Ib_ARoNL2cvMTF6aDR4MzZiNBAB">ดูที่พัก/รูปจริง</a></div>
+</div></details></div></div>
+</div>
+<div class="source-note">เวลาใน Day 2 เป็นเวลาเป้าหมายสำหรับวางแผน และเผื่อผู้สูงอายุแล้วบางส่วน แต่ <strong>ตาราง Pirate Ship ต้องยืนยันใกล้วันเดินทาง</strong> เพราะเที่ยวเรือและสภาพอากาศอาจเปลี่ยนได้</div>
+</section><section class="panel" id="toilets">
+<div class="section-title"><h2>💩 ห้องน้ำใกล้ฉัน</h2><small>Day 1–2 + ค้นจากตำแหน่งปัจจุบัน</small></div>
+<div class="locator" id="finder"><h3>💩📍 ห้องน้ำในรัศมี 2 กม. จากตำแหน่งตอนนี้</h3><p class="lead" style="margin:0">กดปุ่มแล้วอนุญาตให้ใช้ตำแหน่ง หน้าเว็บจะดึงรายชื่อห้องน้ำสาธารณะ และร้าน/สถานีที่มีห้องน้ำ (ข้อมูลจาก OpenStreetMap) เรียงจากใกล้สุด พร้อมปุ่มนำทาง</p>
+<button class="finder-btn" id="findBtn" type="button">📍 หาห้องน้ำใกล้ฉัน (2 กม.)</button>
+<div class="finder-status" id="findStatus" role="status" aria-live="polite"></div>
+<div class="finder-list" id="findList"></div>
+<div class="footnote">ใช้ได้เมื่อเปิดหน้าเว็บผ่านลิงก์ https ใน Safari/Chrome ถ้าเปิดไฟล์จากแอป Files หรือเบราว์เซอร์ไม่ให้ใช้ตำแหน่ง ให้ใช้ปุ่มแผนที่ด้านล่างแทน ร้านสะดวกซื้อในญี่ปุ่นส่วนใหญ่มีห้องน้ำให้ใช้ แม้จะไม่อยู่ในรายการ</div></div>
+<div class="locator"><h3>🗺️ ค้นในแอปแผนที่</h3><p class="lead" style="margin:0">แอปแผนที่จะใช้ตำแหน่งของเครื่องในตอนนั้นค้นหา “public toilet / 公衆トイレ” ใกล้ตัว</p><div class="searchbuttons"><a href="https://maps.apple.com/?q=public%20toilet">Apple Maps — ห้องน้ำใกล้ฉัน</a><a href="https://www.google.com/maps/search/public+toilet/">Google Maps — ห้องน้ำใกล้ฉัน</a></div></div>
+<div class="locator"><h3>💩 จุดห้องน้ำตามเส้นทาง Day 1</h3><div class="point"><b>💩 Haneda Airport T3</b><small>มีห้องน้ำหลายจุด รวม accessible restroom</small></div><div class="point"><b>💩 Haneda Airport Garden / จุดรับรถ Europcar–NICONICO</b><small>แวะเข้าห้องน้ำก่อนเริ่มขับรถได้สะดวก</small></div><div class="point"><b>💩 EXPASA Ebina Downbound</b><small>เหมาะที่สุดสำหรับแวะห้องน้ำพร้อมกันทั้ง 12 คน</small></div><div class="point"><b>💩 Hakone Kowakien Yunessun</b><small>มีห้องน้ำ ห้องเปลี่ยนชุด และล็อกเกอร์ภายใน</small></div><div class="point"><b>💩 Rakuten STAY TERRACE Hakone Kowakudani</b><small>ถึงที่พักแล้วใช้ห้องน้ำภายในห้องพักได้เลย</small></div></div><div class="locator"><h3>💩 จุดห้องน้ำตามเส้นทาง Day 2</h3>
+<div class="point"><b>💩 Hakone Shrine</b><small>มีห้องน้ำบริเวณศาลเจ้า; ผู้ใช้วีลแชร์ใช้เส้น Treasure Hall / Parking No.3</small></div>
+<div class="point"><b>💩 Taikanzan Observatory / Sky Lounge</b><small>มีห้องน้ำที่จุดพักรถ</small></div>
+<div class="point"><b>💩 Togendai Station</b><small>มีห้องน้ำ ลิฟต์ ทางลาด และพื้นที่รอเรือ/กระเช้า</small></div>
+<div class="point"><b>💩 Owakudani Station</b><small>มีห้องน้ำ ลิฟต์ และจุดพักภายในสถานี</small></div>
+<div class="point"><b>💩 Hakone Pirate Ship</b><small>เรือทั้ง 3 ลำมีห้องน้ำ และมีห้องน้ำอเนกประสงค์</small></div>
+<div class="point"><b>💩 Moto-Hakone Port / Ashinoko Chaya</b><small>มีห้องน้ำบริเวณท่าเรือและร้านอาหาร</small></div>
+<div class="point"><b>💩 Oshino Hakkai</b><small>มีห้องน้ำสาธารณะ/ที่จอดรถหลายจุดรอบพื้นที่ท่องเที่ยว</small></div>
+<div class="point"><b>💩 Bamboo Yado</b><small>ถึงที่พักแล้วใช้ห้องน้ำภายในบ้านพักได้</small></div>
+</div>
+</section>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('findBtn'),st=document.getElementById('findStatus'),list=document.getElementById('findList');
+  var R=2000,MAX=20;
+  var ENDPOINTS=['https://overpass-api.de/api/interpreter','https://overpass.kumi.systems/api/interpreter'];
+  function say(t,err){st.textContent=t;st.className='finder-status'+(err?' err':'');}
+  function dist(a,b,c,d){var r=Math.PI/180,x=Math.sin((c-a)*r/2),y=Math.sin((d-b)*r/2);var h=x*x+Math.cos(a*r)*Math.cos(c*r)*y*y;return 12742000*Math.asin(Math.sqrt(h));}
+  function fmt(m){return m<1000?Math.round(m/10)*10+' ม.':(m/1000).toFixed(1)+' กม.';}
+  function walk(m){return Math.max(1,Math.round(m/70))+' นาทีเดิน';}
+  function label(t){
+    var n=t['name:ja']||t.name||t['name:en'];
+    if(t.amenity==='toilets')return n?n+' (ห้องน้ำ)':'ห้องน้ำสาธารณะ';
+    if(t.shop==='convenience')return (n||'ร้านสะดวกซื้อ')+' (ห้องน้ำในร้าน)';
+    return (n||'สถานที่')+' (มีห้องน้ำ)';
+  }
+  function meta(t){
+    var m=[];
+    if(t.wheelchair==='yes'||t['toilets:wheelchair']==='yes')m.push('♿ วีลแชร์ได้');
+    if(t.fee==='yes'||t['toilets:fee']==='yes')m.push('💴 เสียเงิน');else if(t.fee==='no'||t['toilets:fee']==='no')m.push('ฟรี');
+    if(t.opening_hours)m.push('🕒 '+t.opening_hours);
+    if(t.diaper==='yes'||t.changing_table==='yes')m.push('🚼 ที่เปลี่ยนผ้าอ้อม');
+    return m.join(' · ');
+  }
+  function link(cls,href,text){var a=document.createElement('a');a.className='btn '+cls;a.href=href;a.target='_blank';a.rel='noopener';a.textContent=text;return a;}
+  function render(items){
+    list.textContent='';
+    items.forEach(function(it){
+      var c=document.createElement('div');c.className='wc';
+      var top=document.createElement('div');top.className='wc-top';
+      var b=document.createElement('b');b.textContent=label(it.t);
+      var d=document.createElement('span');d.className='wc-dist';d.textContent=fmt(it.d);
+      top.appendChild(b);top.appendChild(d);c.appendChild(top);
+      var mt=document.createElement('div');mt.className='wc-meta';mt.textContent=[walk(it.d),meta(it.t)].filter(Boolean).join(' · ');c.appendChild(mt);
+      var ac=document.createElement('div');ac.className='actions';
+      var ll=it.lat+','+it.lon;
+      ac.appendChild(link('','https://maps.apple.com/?daddr='+ll+'&dirflg=w','Apple Maps เดินไป'));
+      ac.appendChild(link('light','https://www.google.com/maps/dir/?api=1&destination='+ll+'&travelmode=walking','Google Maps'));
+      c.appendChild(ac);list.appendChild(c);
+    });
+  }
+  function query(lat,lon,i){
+    var q='[out:json][timeout:25];(nwr["amenity"="toilets"](around:'+R+','+lat+','+lon+');nwr["toilets"="yes"](around:'+R+','+lat+','+lon+'););out center tags;';
+    return fetch(ENDPOINTS[i],{method:'POST',body:'data='+encodeURIComponent(q),headers:{'Content-Type':'application/x-www-form-urlencoded'}})
+      .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
+      .catch(function(e){if(i+1<ENDPOINTS.length)return query(lat,lon,i+1);throw e;});
+  }
+  function done(){btn.disabled=false;btn.textContent='🔄 ค้นหาอีกครั้ง';}
+  btn.addEventListener('click',function(){
+    if(!('geolocation' in navigator)){say('เบราว์เซอร์นี้ใช้ตำแหน่งไม่ได้ ใช้ปุ่มแผนที่ด้านล่างแทน',true);return;}
+    btn.disabled=true;btn.textContent='⏳ กำลังหาตำแหน่ง…';say('');list.textContent='';
+    navigator.geolocation.getCurrentPosition(function(p){
+      var lat=p.coords.latitude,lon=p.coords.longitude;
+      btn.textContent='⏳ กำลังค้นห้องน้ำ…';
+      query(lat,lon,0).then(function(js){
+        var seen={},items=[];
+        (js.elements||[]).forEach(function(e){
+          var la=e.lat!=null?e.lat:(e.center&&e.center.lat),lo=e.lon!=null?e.lon:(e.center&&e.center.lon);
+          if(la==null||!e.tags)return;
+          var k=e.type+e.id;if(seen[k])return;seen[k]=1;
+          var d=dist(lat,lon,la,lo);if(d<=R)items.push({t:e.tags,lat:la,lon:lo,d:d});
+        });
+        items.sort(function(a,b){return a.d-b.d;});
+        var total=items.length;items=items.slice(0,MAX);
+        if(!items.length)say('ไม่พบข้อมูลห้องน้ำในรัศมี 2 กม. ลองใช้ปุ่มแผนที่ด้านล่าง หรือแวะร้านสะดวกซื้อ/สถานีใกล้ ๆ',true);
+        else say('พบ '+total+' จุดในรัศมี 2 กม.'+(total>MAX?' แสดง '+MAX+' จุดที่ใกล้ที่สุด':'')+' · ความแม่นยำตำแหน่ง ±'+Math.round(p.coords.accuracy)+' ม.');
+        render(items);done();
+      }).catch(function(){say('ดึงข้อมูลห้องน้ำไม่สำเร็จ (อินเทอร์เน็ตอาจหลุด) ลองกดอีกครั้ง หรือใช้ปุ่มแผนที่ด้านล่าง',true);done();});
+    },function(err){
+      say(err&&err.code===1?'ไม่ได้รับอนุญาตให้ใช้ตำแหน่ง เปิดได้ที่ การตั้งค่า › ความเป็นส่วนตัว › บริการหาตำแหน่ง หรือใช้ปุ่มแผนที่ด้านล่างแทน':'หาตำแหน่งไม่ได้ (เช่น เปิดจากแอป Files หรือสัญญาณ GPS อ่อน) ใช้ปุ่มแผนที่ด้านล่างแทน',true);done();
+    },{enableHighAccuracy:true,timeout:15000,maximumAge:60000});
+  });
+})();
+</script>
+</body></html>
